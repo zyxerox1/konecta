@@ -9,3 +9,22 @@ versiones donde se relizo la prueba:
 PHP: 8.0.19
 MySql: 10.4.24-MariaDB
 Laravel: 9.41.0
+
+
+consulta requeridas
+
+Realizar una consulta que permita conocer cuál es el producto que más stock tiene : 
+
+SELECT productos.nombre_producto,productos.stock 
+FROM productos 
+order By productos.stock desc LIMIT 1;
+
+ Realizar una consulta que permita conocer cuál es el producto más vendido:
+
+SELECT sub_query.total_ventas, productos.nombre_producto 
+FROM productos inner join ((SELECT SUM(ventas.cantidad) as total_ventas, ventas.id_producto 
+                            FROM ventas 
+                            GROUP BY ventas.id_producto) AS sub_query
+                            ) on (productos.id=sub_query.id_producto) 
+ORDER by sub_query.total_ventas desc 
+LIMIT 1;
