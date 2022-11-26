@@ -1,0 +1,85 @@
+/*barra de navegacion*/
+.logoNav{
+    width: 250px;
+}
+
+.navbar-brand {
+    border-width: 0px;
+    border-right-width: 1px;
+    border-style: solid;
+    padding-right: 25px;
+    border-color: #002855;
+}
+
+.navbar{
+    background-color: #e5f1ff !important;
+    color: black !important;
+    border-color: #000000 !important;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar-dark .navbar-toggler {
+    color: black !important;
+    border-color: white !important;
+    background-color: black;
+}
+
+.nav-link{
+    color: #002855 !important;
+    border-color: black !important;
+    font-size: 26px;
+}
+
+/*button*/
+.btn_completo{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+/*textos*/
+.modal-title{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+/*card*/
+.tittle-card{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    font-size: 18px;
+}
+
+.titulo-deplegue{
+    color: #002855;
+    text-decoration: blink;
+}
+
+.titulo-deplegue:hover{
+    color: #000000!important;
+    text-decoration: blink;
+}
+
+.card-desplegue{
+    cursor: pointer;
+}
+
+/*cargar*/
+.loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 98;
+    background: url(../../public/loader.gif) no-repeat 50% 50% fixed;
+    opacity: .8;
+    display: none;
+    background-repeat: no-repeat;
+    background-size: 180px;
+    background-color: black;
+}
